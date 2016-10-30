@@ -31,8 +31,8 @@ def download_vqa():
     os.system('unzip data/zip/Annotations_Val_mscoco.zip -d data/annotations/')
 
     #unzip coco train images
-    os.system('unzip data/zip/train2014.zip -d data/images/train2014)
-    os.system('unzip data/zip/val2014.zip -d data/images/train2014)
+    os.system('unzip data/zip/train2014.zip -d data/images/train2014')
+    os.system('unzip data/zip/val2014.zip -d data/images/train2014')
 
 
 def main(params):
