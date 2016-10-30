@@ -31,8 +31,8 @@ def download_vqa():
     os.system('unzip data/zip/Annotations_Val_mscoco.zip -d data/annotations/')
 
     #unzip coco train images
-    os.system('unzip data/zip/train2014.zip -d data/images/train2014')
-    os.system('unzip data/zip/val2014.zip -d data/images/train2014')
+    os.system('unzip data/zip/train2014.zip -d data/')
+    os.system('unzip data/zip/val2014.zip -d data/')
 
 
 def main(params):
@@ -86,7 +86,7 @@ def main(params):
         val_ques = json.load(open('data/annotations/MultipleChoice_mscoco_val2014_questions.json', 'r'))
         test_ques = json.load(open('data/annotations/MultipleChoice_mscoco_test2015_questions.json', 'r'))
         
-        subtype = 'data/images/train2014'
+        subtype = 'data/train2014'
         for i in range(len(train_anno['annotations'])):
             ans = train_anno['annotations'][i]['multiple_choice_answer']
             question_id = train_anno['annotations'][i]['question_id']
@@ -97,7 +97,7 @@ def main(params):
 
             train.append({'ques_id': question_id, 'img_path': image_path, 'question': question, 'MC_ans': mc_ans, 'ans': ans})
 
-        subtype = 'data/images/val2014'
+        subtype = 'data/val2014'
         for i in range(len(val_anno['annotations'])):
             ans = val_anno['annotations'][i]['multiple_choice_answer']
             question_id = val_anno['annotations'][i]['question_id']
