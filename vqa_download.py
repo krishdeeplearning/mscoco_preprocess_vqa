@@ -16,7 +16,7 @@ def download_vqa():
 
     #Download mscoco train images
     os.system('wget http://msvocds.blob.core.windows.net/coco2014/train2014.zip   -P data/zip/')
-    os.system('wget http://msvocds.blob.core.windows.net/coco2014/val2014.zip  -P data/zip/')
+    # os.system('wget http://msvocds.blob.core.windows.net/coco2014/val2014.zip  -P data/zip/')
 
     # Download the VQA Annotations
     os.system('wget http://visualqa.org/data/mscoco/vqa/Annotations_Train_mscoco.zip -P data/zip/')
